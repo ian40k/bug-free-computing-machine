@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOMGEN HUB</title>
+  <style>
+    .container{
+      background:rgba(225,225,225,0.2);
+      backdrop-filter: blur(5px);
+      border-radius:15px;
+      margin: 10px;
+      padding: 20px;
+      box-shadow: 0,0,30px rgba(0,0,0,0.2);
+    }
+    body{
+      font-size: 20px;
+      background-image:url("20251110_174926.jpg");
+      background-size:1500px;
+    }
+    #input{
+      margin:10px;
+      padding: 20px;
+      border-radius: 20px;
+    }
+    .btn{
+      background: antiquewhite;
+      border-radius: 10px;
+      margin:5px;
+      padding: 10px;
+    }
+    
+  </style>
+</head>
+
+<body>
+ <h1 style="color:#f2f2f2;">JOIN US DOMGEN</h1>
+ <div class="container">
+ <h3 style="color:#f9f9f9;">SignIn</h3>
+ <center>
+ <input type="text"placeholder="Enter Email"id="input"/>
+ <br />
+ <input type="tel" placeholder="Enterphone Number"id="input">
+ <br />
+ <input type="text"placeholder="Enter username"id="input">
+ <br />
+ <input type="text"placeholder="Enter password "id="input">
+ <br />
+
+  <button onclick="go()"class="btn"id="btn">SignIn</button>
+  <p id="demo"></p>
+   </center>
+</div>
+<script>
+    let username=localStorage.getItem('username');
+    
+  function go(){
+
+    let name=document.getElementById('input').value;
+    
+    let btn=document.getElementById('btn');
+    if(name === ""){
+      alert('answer the input plz');
+      document.getElementById('demo').innerHTML="❌error"
+      return;
+    }
+    setTimeout(function() {
+    window.location.href= "https://whatsapp.com/channel/0029Vb8wyGk1iUxdoi0WOA1U";
+    localStorage.setItem('username',name)
+    },5000);
+  
+}
+  
+  
+</script>
+</body>
+
+</html>
